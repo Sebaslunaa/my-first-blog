@@ -1,12 +1,12 @@
-<html>
-	<head>
-		<title>Sebastian's Blog</title>
-	</head>
-	<body>
-		<h1>Página de prueba</h1>
-		<h2>Segundo título</h2>
-		<p>Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto Texto </p>
+<div>
+    <h1><a href="/">Sebastian's Blog</a></h1>
+    <h3> This a test blog from Sebastian Luna </h3>
+</div>
 
-		<ul><li>Primer item</li><li>Segundo item</li><li>Tercer item</li>
-	</body>
-</html>
+{% for post in posts %}
+    <div>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+        <h5>published: {{ post.published_date }}</h5>
+    </div>
+{% endfor %}
